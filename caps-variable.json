@@ -1,0 +1,29 @@
+{
+    "description": "WES: CAPS LAYER: Variable",
+    "manipulators": [
+        {
+            "from": {
+                "key_code": "caps_lock",
+                "modifiers": { "optional": ["any"] }
+            },
+            "to": [
+                {
+                    "set_variable": {
+                        "name": "caps_layer",
+                        "value": 1
+                    }
+                }
+            ],
+            "to_after_key_up": [
+                {
+                    "set_variable": {
+                        "name": "caps_layer",
+                        "value": 0
+                    }
+                }
+            ],
+            "to_if_alone": [{ "key_code": "caps_lock" }],
+            "type": "basic"
+        }
+    ]
+}
