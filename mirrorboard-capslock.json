@@ -1,9 +1,22 @@
 {
-    "description": "(WES) CAPSLOCK MIRRORBOARD: A one-handed layout keyboard layout. Hold caps lock to mirror the keyboard layout so that both sides of the keyboard can be intuitively typed by either hand on its own.",
+    "description": "(WES) CAPSLOCK MIRRORBOARD: A one-handed layout keyboard layout. Tap caps lock to enable/disable mirroring. Hold spacebar to mirror the keyboard layout so that both sides of the keyboard can be intuitively typed by either hand on its own.",
     "manipulators": [
         {
+            "conditions": [{ "name": "mirror_enabled", "type": "variable_if", "value": 0 }],
+            "from": { "key_code": "caps_lock" },
+            "to": [{ "set_variable": { "name": "mirror_enabled", "value": 1 } }],
+            "type": "basic"
+        },
+        {
+            "conditions": [{ "name": "mirror_enabled", "type": "variable_if", "value": 1 }],
+            "from": { "key_code": "caps_lock" },
+            "to": [{ "set_variable": { "name": "mirror_enabled", "value": 0 } }],
+            "type": "basic"
+        },
+        {
+            "conditions": [{ "name": "mirror_enabled", "type": "variable_if", "value": 1 }],
             "from": {
-                "key_code": "caps_lock",
+                "key_code": "spacebar",
                 "modifiers": { "optional": ["any"] }
             },
             "to": [
@@ -22,7 +35,7 @@
                     }
                 }
             ],
-            "to_if_alone": [{ "key_code": "caps_lock" }],
+            "to_if_alone": [{ "key_code": "spacebar" }],
             "type": "basic"
         },
         {
