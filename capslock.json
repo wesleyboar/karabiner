@@ -2,6 +2,17 @@
     "description": "(WES) CAPSLOCK",
     "manipulators": [
         {
+            "conditions": [
+                { "name": "caps_layer", "type": "variable_if", "value": 1 },
+                { "name": "mirror_enabled", "type": "variable_if", "value": 0 },
+                { "name": "mirror", "type": "variable_if", "value": 0 }
+            ],
+            "from": { "key_code": "spacebar", "modifiers": { "optional": ["any"] } },
+            "to": [{ "key_code": "left_shift", "lazy": true }],
+            "type": "basic"
+        },
+        {
+            "conditions": [{ "name": "mirror", "type": "variable_if", "value": 0 }],
             "from": {
                 "key_code": "caps_lock",
                 "modifiers": { "optional": ["any"] }
