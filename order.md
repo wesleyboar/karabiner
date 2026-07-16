@@ -2,7 +2,8 @@ Order required for modifications is (WES) CAPSLOCK at top.
 
 For consistency, just always use this order:
 - (WES) CAPSLOCK
-- MIRRORBOARD
+- **either** MIRRORBOARD
+  **or** (WES) MIRRORBOARD (LEFT-HAND ONLY)
 - (WES) MIRRORBOARD: Extra
 - (WES) CAPSLOCK: Arrow Keys
 - (WES) CAPSLOCK: Arrow Chars
