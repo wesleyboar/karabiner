@@ -142,7 +142,7 @@
                 "key_code": "tab",
                 "modifiers": { "optional": ["any"] }
             },
-            "to": [{ "key_code": "open_bracket" }],
+            "to": [{ "key_code": "delete_or_backspace" }],
             "type": "basic"
         },
         {
