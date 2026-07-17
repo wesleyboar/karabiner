@@ -1,7 +1,58 @@
 {
-    "description": "(WES) MIRRORBOARD (LEFT-HAND ONLY): A one-handed layout keyboard layout. Hold spacebar to mirror the keyboard layout so that right side of the keyboard can be intuitively typed by left hand on its own.",
+    "description": "(WES) MIRRORBOARD (LEFT-HAND ONLY): A one-handed layout keyboard layout. Hold spacebar to mirror the keyboard layout so that right side of the keyboard can be intuitively typed by left hand on its own. Toggle the whole rule on/off with control+option+command+q (starts off after reload).",
     "manipulators": [
         {
+            "conditions": [
+                {
+                    "name": "mirrorboard_left_enabled",
+                    "type": "variable_if",
+                    "value": 0
+                }
+            ],
+            "from": {
+                "key_code": "q",
+                "modifiers": { "mandatory": ["control", "option", "command"] }
+            },
+            "to": [
+                {
+                    "set_variable": {
+                        "name": "mirrorboard_left_enabled",
+                        "value": 1
+                    }
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "mirrorboard_left_enabled",
+                    "type": "variable_if",
+                    "value": 1
+                }
+            ],
+            "from": {
+                "key_code": "q",
+                "modifiers": { "mandatory": ["control", "option", "command"] }
+            },
+            "to": [
+                {
+                    "set_variable": {
+                        "name": "mirrorboard_left_enabled",
+                        "value": 0
+                    }
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "mirrorboard_left_enabled",
+                    "type": "variable_if",
+                    "value": 1
+                }
+            ],
             "from": {
                 "key_code": "spacebar",
                 "modifiers": { "optional": ["any"] }
@@ -31,6 +82,11 @@
                     "name": "mirror",
                     "type": "variable_if",
                     "value": 1
+                },
+                {
+                    "name": "mirrorboard_left_enabled",
+                    "type": "variable_if",
+                    "value": 1
                 }
             ],
             "from": {
@@ -44,6 +100,11 @@
             "conditions": [
                 {
                     "name": "mirror",
+                    "type": "variable_if",
+                    "value": 1
+                },
+                {
+                    "name": "mirrorboard_left_enabled",
                     "type": "variable_if",
                     "value": 1
                 }
@@ -61,6 +122,11 @@
                     "name": "mirror",
                     "type": "variable_if",
                     "value": 1
+                },
+                {
+                    "name": "mirrorboard_left_enabled",
+                    "type": "variable_if",
+                    "value": 1
                 }
             ],
             "from": {
@@ -74,6 +140,11 @@
             "conditions": [
                 {
                     "name": "mirror",
+                    "type": "variable_if",
+                    "value": 1
+                },
+                {
+                    "name": "mirrorboard_left_enabled",
                     "type": "variable_if",
                     "value": 1
                 }
@@ -91,6 +162,11 @@
                     "name": "mirror",
                     "type": "variable_if",
                     "value": 1
+                },
+                {
+                    "name": "mirrorboard_left_enabled",
+                    "type": "variable_if",
+                    "value": 1
                 }
             ],
             "from": {
@@ -104,6 +180,11 @@
             "conditions": [
                 {
                     "name": "mirror",
+                    "type": "variable_if",
+                    "value": 1
+                },
+                {
+                    "name": "mirrorboard_left_enabled",
                     "type": "variable_if",
                     "value": 1
                 }
@@ -121,6 +202,11 @@
                     "name": "mirror",
                     "type": "variable_if",
                     "value": 1
+                },
+                {
+                    "name": "mirrorboard_left_enabled",
+                    "type": "variable_if",
+                    "value": 1
                 }
             ],
             "from": {
@@ -134,6 +220,11 @@
             "conditions": [
                 {
                     "name": "mirror",
+                    "type": "variable_if",
+                    "value": 1
+                },
+                {
+                    "name": "mirrorboard_left_enabled",
                     "type": "variable_if",
                     "value": 1
                 }
@@ -151,6 +242,11 @@
                     "name": "mirror",
                     "type": "variable_if",
                     "value": 1
+                },
+                {
+                    "name": "mirrorboard_left_enabled",
+                    "type": "variable_if",
+                    "value": 1
                 }
             ],
             "from": {
@@ -164,6 +260,11 @@
             "conditions": [
                 {
                     "name": "mirror",
+                    "type": "variable_if",
+                    "value": 1
+                },
+                {
+                    "name": "mirrorboard_left_enabled",
                     "type": "variable_if",
                     "value": 1
                 }
@@ -181,6 +282,11 @@
                     "name": "mirror",
                     "type": "variable_if",
                     "value": 1
+                },
+                {
+                    "name": "mirrorboard_left_enabled",
+                    "type": "variable_if",
+                    "value": 1
                 }
             ],
             "from": {
@@ -194,6 +300,11 @@
             "conditions": [
                 {
                     "name": "mirror",
+                    "type": "variable_if",
+                    "value": 1
+                },
+                {
+                    "name": "mirrorboard_left_enabled",
                     "type": "variable_if",
                     "value": 1
                 }
@@ -211,6 +322,11 @@
                     "name": "mirror",
                     "type": "variable_if",
                     "value": 1
+                },
+                {
+                    "name": "mirrorboard_left_enabled",
+                    "type": "variable_if",
+                    "value": 1
                 }
             ],
             "from": {
@@ -224,6 +340,11 @@
             "conditions": [
                 {
                     "name": "mirror",
+                    "type": "variable_if",
+                    "value": 1
+                },
+                {
+                    "name": "mirrorboard_left_enabled",
                     "type": "variable_if",
                     "value": 1
                 }
@@ -241,6 +362,11 @@
                     "name": "mirror",
                     "type": "variable_if",
                     "value": 1
+                },
+                {
+                    "name": "mirrorboard_left_enabled",
+                    "type": "variable_if",
+                    "value": 1
                 }
             ],
             "from": {
@@ -254,6 +380,11 @@
             "conditions": [
                 {
                     "name": "mirror",
+                    "type": "variable_if",
+                    "value": 1
+                },
+                {
+                    "name": "mirrorboard_left_enabled",
                     "type": "variable_if",
                     "value": 1
                 }
@@ -271,6 +402,11 @@
                     "name": "mirror",
                     "type": "variable_if",
                     "value": 1
+                },
+                {
+                    "name": "mirrorboard_left_enabled",
+                    "type": "variable_if",
+                    "value": 1
                 }
             ],
             "from": {
@@ -284,6 +420,11 @@
             "conditions": [
                 {
                     "name": "mirror",
+                    "type": "variable_if",
+                    "value": 1
+                },
+                {
+                    "name": "mirrorboard_left_enabled",
                     "type": "variable_if",
                     "value": 1
                 }
@@ -301,6 +442,11 @@
                     "name": "mirror",
                     "type": "variable_if",
                     "value": 1
+                },
+                {
+                    "name": "mirrorboard_left_enabled",
+                    "type": "variable_if",
+                    "value": 1
                 }
             ],
             "from": {
@@ -314,6 +460,11 @@
             "conditions": [
                 {
                     "name": "mirror",
+                    "type": "variable_if",
+                    "value": 1
+                },
+                {
+                    "name": "mirrorboard_left_enabled",
                     "type": "variable_if",
                     "value": 1
                 }
@@ -331,6 +482,11 @@
                     "name": "mirror",
                     "type": "variable_if",
                     "value": 1
+                },
+                {
+                    "name": "mirrorboard_left_enabled",
+                    "type": "variable_if",
+                    "value": 1
                 }
             ],
             "from": {
@@ -344,6 +500,11 @@
             "conditions": [
                 {
                     "name": "mirror",
+                    "type": "variable_if",
+                    "value": 1
+                },
+                {
+                    "name": "mirrorboard_left_enabled",
                     "type": "variable_if",
                     "value": 1
                 }
@@ -361,6 +522,11 @@
                     "name": "mirror",
                     "type": "variable_if",
                     "value": 1
+                },
+                {
+                    "name": "mirrorboard_left_enabled",
+                    "type": "variable_if",
+                    "value": 1
                 }
             ],
             "from": {
@@ -374,6 +540,11 @@
             "conditions": [
                 {
                     "name": "mirror",
+                    "type": "variable_if",
+                    "value": 1
+                },
+                {
+                    "name": "mirrorboard_left_enabled",
                     "type": "variable_if",
                     "value": 1
                 }
